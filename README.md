@@ -3,6 +3,8 @@ Function to extract the request URL from a Node.js HTTP response (http.IncomingM
 
     npm install get-request-url
 
+Compatible with Node.js version 6.13.0 and higher.
+
 Example:
 
     const https = require('https');
