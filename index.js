@@ -1,3 +1,5 @@
+const URL = URL || require('url').URL;
+
 /**
  * RFC3986 compliant encodeURIComponent function.
  * Source: https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent

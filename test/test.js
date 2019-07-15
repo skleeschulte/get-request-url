@@ -2,6 +2,7 @@ const http = require('http');
 const https = require('https');
 const fs = require('fs');
 const assert = require('assert');
+const URL = URL || require('url').URL;
 const getRequestUrl = require('../index');
 
 const HTTP_PORT = 3080;
