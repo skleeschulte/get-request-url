@@ -1,4 +1,4 @@
-const URL = URL || require('url').URL;
+const URL = global.URL || require('url').URL;
 
 /**
  * RFC3986 compliant encodeURIComponent function.
