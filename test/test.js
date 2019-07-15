@@ -15,14 +15,19 @@ const HTTPS_PORT = 3443;
  * @returns {Promise<http.IncomingMessage>} HTTP response.
  */
 function request(url) {
-    const isHttps = new URL(url).protocol === 'https:';
+    const parsedUrl = new URL(url);
+    const isHttps = parsedUrl.protocol === 'https:';
 
     return new Promise(resolve => {
         if (isHttps) {
             const options = {
+                auth: parsedUrl.username + (parsedUrl.password ? ':' + parsedUrl.password : ''),
+                hostname: parsedUrl.hostname,
+                port: parsedUrl.port,
+                path: parsedUrl.pathname + parsedUrl.search,
                 ca: fs.readFileSync('test/fixtures/localhost.cert')
             };
-            https.get(url, options, resolve);
+            https.get(options, resolve);
         } else {
             http.get(url, resolve);
         }
