@@ -1,4 +1,7 @@
 # get-request-url
+
+[![Build Status](https://travis-ci.org/skleeschulte/get-request-url.svg?branch=master)](https://travis-ci.org/skleeschulte/get-request-url)
+
 Function to extract the request URL from a Node.js HTTP response (http.IncomingMessage).
 
     npm install get-request-url
