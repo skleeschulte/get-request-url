@@ -1,6 +1,6 @@
 {
   "name": "get-request-url",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Function to extract the request URL from a Node.js HTTP response (http.IncomingMessage).",
   "keywords": [
     "http",
