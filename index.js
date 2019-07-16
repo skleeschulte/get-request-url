@@ -17,8 +17,8 @@ function encodeURIComponentRFC3986(string) {
  * Get request URL from HTTP response. The hash portion of a request URL is not sent to the server and will not be
  * included in the result of this function.
  *
- * @param {http.IncomingMessage}  res          HTTP response.
- * @param {boolean}               includeAuth  Whether to include authorization information in the URL.
+ * @param {http.IncomingMessage}  res            HTTP response.
+ * @param {boolean}               [includeAuth]  Whether to include authorization information in the URL.
  * @returns {URL} The request URL.
  */
 function getRequestUrl(res, includeAuth) {
